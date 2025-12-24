@@ -4,6 +4,18 @@
     font-weight: 100 900;
 }
 
+:root {
+    --color-grey-700: hsl(0, 0%, 20%);
+    --color-grey-800: hsl(0, 0%, 12%);
+    --color-grey-900: hsl(0, 0%, 8%);
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --font-base: 'Inter', sans-serif;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1.5rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,14 +24,15 @@
 
 body {
     display: flex;
-    font-family: Inter;
-    background-color: hsl(0, 0%, 8%);
+    font-family: var(--font-base);
+    background-color: var(--color-grey-900);
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-size: 14px;
-    color: hsl(0, 0%, 100%);
+    color: var(--color-white);
     font-weight: 600;
+    padding: var(--spacing-md)
 }
 
 .card {
@@ -27,48 +40,67 @@ body {
     flex-direction: column;
     width: fit-content;
     gap: 12px;
-    background-color: hsl(0, 0%, 12%);
-    padding: 24px;
+    background-color: var(--color-grey-800);
+    padding: var(--spacing-md);
     align-items: center;
-    border-radius: 12px;
+    border-radius: 0.75rem;
 }
 
-img {
+.profile-picture {
     width: 96px;
     height: 96px;
     border-radius: 48px;
 }
 
-h1 {
+.profile-name {
     font-size: 23px;
     font-weight: 600;
     padding-top: 16px;
+    margin-bottom: -4px;
 }
 
-h2 {
+.profile-location { 
     font-size: 14px;
     font-weight: 600;
-    color: hsl(75, 94%, 57%);
+    color: var(--color-green);
 }
 
-.description {
+.profile-bio {
     font-weight: 400;
     padding-top: 16px;
     padding-bottom: 16px;
 }
 
-.link_box {
+.link-list {
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+
+.link-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 2.5rem;
     width: 100%;
-    background-color: hsl(0, 0%, 20%);
+    background-color: var(--color-grey-700);
+    color: var(--color-white);
+    text-decoration: none;
     border-radius: 6px;
 }
 
-.link_box:hover,
-.link_box:focus {
-    background-color: hsl(75, 94%, 57%);
-    color: hsl(0, 0%, 8%);
+.link-btn:hover,
+.link-btn:focus {
+    background-color: var(--color-green);
+    color: var(--color-grey-900);
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 48px;
+    }
 }
