@@ -9,3 +9,66 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    font-family: Inter;
+    background-color: hsl(0, 0%, 8%);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 14px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 12px;
+    background-color: hsl(0, 0%, 12%);
+    padding: 24px;
+    align-items: center;
+    border-radius: 12px;
+}
+
+img {
+    width: 96px;
+    height: 96px;
+    border-radius: 48px;
+}
+
+h1 {
+    font-size: 23px;
+    font-weight: 600;
+    padding-top: 16px;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(75, 94%, 57%);
+}
+
+.description {
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.link_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 6px;
+}
+
+.link_box:hover,
+.link_box:focus {
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 8%);
+}
