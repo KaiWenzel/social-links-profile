@@ -99,6 +99,11 @@ body {
     color: var(--color-grey-900);
 }
 
+.link-btn:active {
+    filter: brightness(0.8);
+    transform: scale(0.98);
+}
+
 @media (min-width: 768px) {
     .card {
         padding: 48px;
